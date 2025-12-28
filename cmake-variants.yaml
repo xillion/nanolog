@@ -1,0 +1,44 @@
+buildType:
+  default: Develop
+  choices:
+    Develop:
+      short: Develop
+      long: Emit debug information but also optimize
+      buildType: Develop
+    Debug:
+      short: Debug
+      long: Emit debug information and don't optimize
+      buildType: Debug
+    Release:
+      short: Release
+      long: Optimize generated code
+      buildType: Release
+board:
+  # Fill name of your targer which has to corespond to
+  # target name in targets.json5 file or custom_targets.json5 in case of custom target.
+  # For simplified just replace every occurrence of YOUR_MBED_TARGET with Mbed target name. 
+  # For example LPC1768 or NUCLEO_L452RE
+  default: NUCLEO_L476RG # default variant (choose) from bellow
+  choices:
+    PT_LOGGER_L433: # Name of one variant
+      short: PT_LOGGER # Short name of the variant
+      settings:
+        MBED_TARGET: PT_LOGGER_L433 # Your mbed target name from targets.json5 file
+        UPLOAD_METHOD: STM32CUBE
+    NUCLEO_L476RG:
+      short: NUCLEO_L476RG
+      settings:
+        MBED_TARGET: NUCLEO_L476RG
+        UPLOAD_METHOD: STM32CUBE
+    WEACT_U585:
+      short: WEACT_U585
+      settings:
+        MBED_TARGET: WEACT_U585
+        UPLOAD_METHOD: STM32CUBE_DFU
+    RASPBERRY_PI_PICO:
+      short: PICO
+      settings:
+        MBED_TARGET: RASPBERRY_PI_PICO
+        UPLOAD_METHOD: PICOTOOL
+
+

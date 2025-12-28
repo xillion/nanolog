@@ -1,0 +1,9 @@
+[submodule "mbed-os"]
+	path = mbed-os
+	url = git@github.com:mbed-ce/mbed-os.git
+[submodule "nanocobs"]
+	path = nanocobs
+	url = git@github.com:charlesnicholson/nanocobs.git
+[submodule "nanopb"]
+	path = nanopb
+	url = git@github.com:nanopb/nanopb.git
